@@ -1,0 +1,37 @@
+Comparison_name,group1_genotypes,group2_genotypes,group1_subytypes,group2_subytypes
+Del17p_vs_no_Del17p_all,"Del17p/p53_WT, Del17p/p53_mut","WT_17p/p53_WT,17p_WT/p53_mut",,
+Del17p_vs_WT_all,Del17p/p53_WT,WT_17p/p53_WT,,
+Del17p_vs_p53_mut_all,Del17p/p53_WT,17p_WT/p53_mut,,
+Del17p_p53_mut_vs_p53_mut_all,Del17p/p53_mut,17p_WT/p53_mut,,
+p53_mut_vs_WT_all_all,17p_WT/p53_mut,WT_17p/p53_WT,,
+Del17p_p53_mut_vs_Del17p_all,Del17p/p53_mut,Del17p/p53_WT,,
+Del17p_vs_no_Del17p_BASAL,"Del17p/p53_WT, Del17p/p53_mut","WT_17p/p53_WT,17p_WT/p53_mut",Basal,Basal
+Del17p_vs_WT_BASAL,Del17p/p53_WT,WT_17p/p53_WT,Basal,Basal
+Del17p_vs_p53_mut_BASAL,Del17p/p53_WT,17p_WT/p53_mut,Basal,Basal
+Del17p_p53_mut_vs_p53_mut_BASAL,Del17p/p53_mut,17p_WT/p53_mut,Basal,Basal
+p53_mut_vs_WT_BASAL,17p_WT/p53_mut,WT_17p/p53_WT,Basal,Basal
+Del17p_p53_mut_vs_Del17p_BASAL,Del17p/p53_mut,Del17p/p53_WT,Basal,Basal
+Del17p_vs_no_Del17p_HER2,"Del17p/p53_WT, Del17p/p53_mut","WT_17p/p53_WT,17p_WT/p53_mut",Her2,Her2
+Del17p_vs_WT_HER2,Del17p/p53_WT,WT_17p/p53_WT,Her2,Her2
+Del17p_vs_p53_mut_HER2,Del17p/p53_WT,17p_WT/p53_mut,Her2,Her2
+Del17p_p53_mut_vs_p53_mut_HER2,Del17p/p53_mut,17p_WT/p53_mut,Her2,Her2
+p53_mut_vs_WT_HER2,17p_WT/p53_mut,WT_17p/p53_WT,Her2,Her2
+Del17p_p53_mut_vs_Del17p_Her2,Del17p/p53_mut,Del17p/p53_WT,Her2,Her2
+Del17p_vs_no_Del17p_all_LUM-A,"Del17p/p53_WT, Del17p/p53_mut","WT_17p/p53_WT,17p_WT/p53_mut",LumA,LumA
+Del17p_vs_WT_LUM-A,Del17p/p53_WT,WT_17p/p53_WT,LumA,LumA
+Del17p_vs_p53_mut_LUM-A,Del17p/p53_WT,17p_WT/p53_mut,LumA,LumA
+Del17p_p53_mut_vs_p53_mut_LUM-A,Del17p/p53_mut,17p_WT/p53_mut,LumA,LumA
+p53_mut_vs_WT_LUM-A,17p_WT/p53_mut,WT_17p/p53_WT,LumA,LumA
+Del17p_p53_mut_vs_Del17p_LUM-A,Del17p/p53_mut,Del17p/p53_WT,LumA,LumA
+Del17p_vs_no_Del17p_all_LUM-B,"Del17p/p53_WT, Del17p/p53_mut","WT_17p/p53_WT,17p_WT/p53_mut",LumB,LumB
+Del17p_vs_WT_LUM-B,Del17p/p53_WT,WT_17p/p53_WT,LumB,LumB
+Del17p_vs_p53_mut_LUM-B,Del17p/p53_WT,17p_WT/p53_mut,LumB,LumB
+Del17p_p53_mut_vs_p53_mut_LUM-B,Del17p/p53_mut,17p_WT/p53_mut,LumB,LumB
+p53_mut_vs_WT_LUM-B,17p_WT/p53_mut,WT_17p/p53_WT,LumB,LumB
+Del17p_p53_mut_vs_Del17p_LUM-B,Del17p/p53_mut,Del17p/p53_WT,LumB,LumB
+Del17p_vs_no_Del17p_all_Normal_like,"Del17p/p53_WT, Del17p/p53_mut","WT_17p/p53_WT,17p_WT/p53_mut",Normal,Normal
+Del17p_vs_WT_Normal_like,Del17p/p53_WT,WT_17p/p53_WT,Normal,Normal
+Del17p_vs_p53_mut_Normal_like,Del17p/p53_WT,17p_WT/p53_mut,Normal,Normal
+Del17p_p53_mut_vs_p53_mut_Normal_like,Del17p/p53_mut,17p_WT/p53_mut,Normal,Normal
+p53_mut_vs_WT_Normal_like,17p_WT/p53_mut,WT_17p/p53_WT,Normal,Normal
+Del17p_p53_mut_vs_Del17p_Normal_like,Del17p/p53_mut,Del17p/p53_WT,Normal,Normal

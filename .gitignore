@@ -1,0 +1,6 @@
+*.Rproj
+.Rproj.user/
+METABRIC/
+TCGA/
+data/Gene_expression_METABRIC.csv
+data/Gene_expression_TCGA.csv
