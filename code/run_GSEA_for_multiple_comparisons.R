@@ -9,7 +9,7 @@ library(clusterProfiler)
 source(here::here("code","p53_and_positional_genesets.R"))
 
 #utility functions
-get_sample_groupds <- function(samples, genotypes,comparison){
+get_sample_groupds <- function(samples, genotypes, subtypes, comparison){
   #convert the "," separated list of genotypes to vectors and remove unneeded spaces
   group1_genotypes <- comparison$group1_genotypes
   group2_genotypes <- comparison$group2_genotypes
@@ -87,6 +87,7 @@ load_top10_hallmark_resutls <- function(dir){
   top10_empty$pvalue <- 1
   top10_empty$p.adjust <- 1
   top10_empty$qvalue <- 1
+  return(list(top10 = top10, top10_empty = top10_empty))
 }
 
 #load data
@@ -145,7 +146,7 @@ for(row in seq(1:nrow(comparisons))){
     if(file.exists(DEG_file_path)){
       DEG <- read.csv(DEG_file_path, row.names = 1)
     } else {
-      sample_groups <- get_sample_groupds(samples, genotypes, comparisons[row,])
+      sample_groups <- get_sample_groupds(samples, genotypes, subtypes, comparisons[row,])
       if(is_gene_counts){
         DEG <- run_DESeq2(sample_groups$group1_samples,sample_groups$group2_samples, expression_data)
       } else{
@@ -175,8 +176,11 @@ for(row in seq(1:nrow(comparisons))){
         gsea_res <- run_GSEA(geneList, category, subcategory, geneset_name)
         saveRDS(gsea_res,gsea_file_path)
       }
-      if((geneset_name == 'Hallmarks') & (comparisons$Comparison_name[j] != 'Del17p_vs_no_Del17p_all')){
-        top10 <- load_top10_hallmark_resutls(save_to)
+      comparison_name <- comparisons[row,'Comparison_name']
+      if((geneset_name == 'Hallmarks') & (comparison_name != 'Del17p_vs_no_Del17p_all')){
+        top10_data <- load_top10_hallmark_resutls(save_to)
+        top10 <- top10_data$top10
+        top10_empty <- top10_data$top10_empty
         gsea_res_fillterd = gsea_res %>% dplyr::filter(ID %in% top10)
         gsea_res_fillterd@result <- rbind(gsea_res_fillterd@result, dplyr::filter(top10_empty,! ID %in% gsea_res_fillterd@result$ID))
         gsea_res_fillterd@result$ID = factor(gsea_res_fillterd@result$ID, levels = top10)
@@ -199,4 +203,3 @@ for(row in seq(1:nrow(comparisons))){
     print(cond)
   })
 }
-

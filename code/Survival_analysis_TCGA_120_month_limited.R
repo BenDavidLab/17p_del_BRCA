@@ -45,6 +45,7 @@ for (annotation in names(annotations)) {
     } else {
       subset_df <- annotation_df[annotation_df$Molecular_Subtype == subtype, ]
     }
+    subset_df <- subset_df %>% filter(Genotype_Group %in% c(group1, group2))
     # Create a survival object for the subset
     surv_obj <- Surv(time = subset_df$Survival_Months, event = subset_df$Status)
     
@@ -107,6 +108,7 @@ for (annotation in names(annotations)) {
     } else {
       subset_df <- annotation_df[annotation_df$Molecular_Subtype == subtype, ]
     }
+    subset_df <- subset_df %>% filter(Genotype_Group %in% c(group1, group2, group3, group4))
     # Create a survival object for the subset
     surv_obj <- Surv(time = subset_df$Survival_Months, event = subset_df$Status)
     
@@ -211,4 +213,3 @@ for (annotation in names(annotations)) {
   }
   
 }
-
